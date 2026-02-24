@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(node -e \"[''tailwindcss'',''@tailwindcss/vite'',''lucide-react'',''tw-animate-css'',''clsx'',''tailwind-merge''].forEach\\(p => { try { require.resolve\\(p\\); console.log\\(''OK:'', p\\) } catch { console.log\\(''MISSING:'', p\\) } }\\)\")",
+      "Bash(npm run build)",
+      "Bash(pkill -f \"node.*index.js\")",
+      "Bash(pkill -f \"nodemon\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/messages -H \"Content-Type: application/json\" -d '{\"\"name\"\":\"\"Test User\"\",\"\"phone\"\":\"\"\\(555\\) 123-4567\"\",\"\"message\"\":\"\"Hello from the test!\"\"}')",
+      "Bash(__NEW_LINE_28def15ad6ffc1cc__ curl -s -I http://localhost:5000/api/messages/export)",
+      "Bash(curl -s -X POST http://localhost:5000/api/messages -H \"Content-Type: application/json\" -d \"{\"\"name\"\":\"\"Test User\"\",\"\"phone\"\":\"\"555-1234\"\",\"\"message\"\":\"\"Hello from test\"\"}\")",
+      "Bash(curl -s http://localhost:5000/api/messages/export -o /tmp/test-messages.xlsx)",
+      "Bash(node -e \":*)",
+      "Bash(curl -s http://localhost:5000/api/messages/export -o \"$TEMP/test-messages.xlsx\")",
+      "Bash(taskkill /PID 40624 /F)",
+      "Bash(cmd /c \"taskkill /PID 40624 /F\")",
+      "Bash(netstat -ano)",
+      "Bash(cmd /c \"taskkill /F /PID 40624\")",
+      "Bash(powershell -Command \"Stop-Process -Id 40624 -Force\")"
+    ]
+  }
+}
