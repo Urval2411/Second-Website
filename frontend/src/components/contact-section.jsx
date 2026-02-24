@@ -11,13 +11,15 @@ export function ContactSection() {
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(null)
 
+  const API = import.meta.env.VITE_API_URL ?? ""
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setSending(true)
     setError(null)
 
     try {
-      const res = await fetch("/api/messages", {
+      const res = await fetch(`${API}/api/messages`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -213,7 +215,7 @@ export function ContactSection() {
       {/* Admin: export all submitted messages as Excel */}
       <div className="mx-auto mt-6 max-w-6xl px-6 flex justify-end">
         <a
-          href="/api/messages/export"
+          href={`${API}/api/messages/export`}
           className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
           title="Download all received messages as Excel"
         >

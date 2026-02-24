@@ -16,7 +16,10 @@
       "Bash(cmd /c \"taskkill /PID 40624 /F\")",
       "Bash(netstat -ano)",
       "Bash(cmd /c \"taskkill /F /PID 40624\")",
-      "Bash(powershell -Command \"Stop-Process -Id 40624 -Force\")"
+      "Bash(powershell -Command \"Stop-Process -Id 40624 -Force\")",
+      "Bash(git rm -r --cached frontend/dist/)",
+      "Bash(git add vercel.json .gitignore frontend/src/ frontend/package.json frontend/vite.config.mts frontend/index.html frontend/.env.example backend/src/index.js backend/package.json)",
+      "Bash(git add -u)"
     ]
   }
 }
